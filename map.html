@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+      #map {
+        height: 400px;
+      }
+    </style>
+    <link rel="stylesheet"
+          href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+  </head>
+  <body>
+       <div id="map"></div>
+      <div>
+        <label>Age Range: </label>
+        <input type="text" value="min" id="minAge" />
+        to
+        <input type="text" value="max" id="maxAge" />
+        <input type="submit" value="Search" name="submit"
+                                            onclick="getAgeRange()" />
+      </div>
+
+       <div>
+        <label>Location of users within 5 miles radius of given lat and long: </label>
+        <input type="text" value="Latitude" id="lat" />
+        and
+        <input type="text" value="Longitude" id="long" />
+        <input type="submit" value="Search" name="submit"
+                                            onclick="getLoc()" />
+      </div>
+
+       <div>
+        <label>User ID# </label>
+        <input type="text" value="user ID" id="id" />
+        <input type="submit" value="Search" name="submit"
+                                            onclick="getId()" />
+      </div>
+
+      <div id="error"></div>
+      <script src="dataMap.js"></script>
+  </body>
+</html>
+
